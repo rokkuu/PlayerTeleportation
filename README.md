@@ -1,6 +1,6 @@
 # PlayerTeleportation
 
-Simple plugin to request and accept teleportation for players on server.
+Send and accept requests to teleport.
 
 Commands:
 
