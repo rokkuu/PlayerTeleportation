@@ -19,8 +19,9 @@ public class PlayerTeleport implements CommandExecutor {
                 Player targetPlayer = Bukkit.getServer().getPlayer(args[0]);
                 if (targetPlayer != null) {
                     UUID playerUuid = player.getUniqueId();
-                    PlayerTeleportation.addPendingPlayerUuid(playerUuid);
-                    targetPlayer.sendMessage(ChatColor.GREEN + "Player " + ChatColor.DARK_GREEN + player.getName() + "" + ChatColor.GREEN + " has requested a teleport to you. Type /tpac <nickname> to accept!");
+                    AcceptTeleportation.addPendingPlayerUuid(playerUuid);
+                    targetPlayer.sendMessage(ChatColor.GREEN + "Player " + ChatColor.DARK_GREEN + player.getName() + "" + ChatColor.GREEN + " has requested a teleport to you. Type /tpac <nickname> to accept or decline with" +
+                            " /tpd <nickname>!");
                 } else {
                     player.sendMessage(ChatColor.RED + "Unknown player, try again.");
                 }
@@ -28,7 +29,7 @@ public class PlayerTeleport implements CommandExecutor {
                 player.sendMessage(ChatColor.RED + "Something went wrong, please try /tpa <nickname>");
             }
         }
-        return false;
+        return true;
     }
 
 

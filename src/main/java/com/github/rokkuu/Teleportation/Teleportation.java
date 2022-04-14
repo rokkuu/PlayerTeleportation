@@ -17,7 +17,8 @@ public class Teleportation extends JavaPlugin {
 
         // register minecraft commands:
        this.getCommand("tpr").setExecutor(new PlayerTeleport());
-       this.getCommand("tpac").setExecutor(new PlayerTeleportation());
+       this.getCommand("tpac").setExecutor(new AcceptTeleportation());
+       this.getCommand("tpd").setExecutor(new DeclineTeleportation());
 
     }
 

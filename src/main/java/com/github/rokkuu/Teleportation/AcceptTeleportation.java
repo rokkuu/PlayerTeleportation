@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.UUID;
 
 
-public class PlayerTeleportation implements CommandExecutor {
+public class AcceptTeleportation implements CommandExecutor {
     private static HashSet<UUID> pendingPlayerUuid = new HashSet<>();
 
     public static void addPendingPlayerUuid(UUID uuid){
@@ -22,9 +22,18 @@ public class PlayerTeleportation implements CommandExecutor {
             pendingPlayerUuid.remove(uuid);
     }
 
+    public static boolean isPendingPlayersEmpty(){
+        return pendingPlayerUuid.isEmpty();
+    }
+
+    public static boolean isPlayerInPendingList(UUID uuid){
+        return pendingPlayerUuid.contains(uuid);
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player){
+
             if (!pendingPlayerUuid.isEmpty()){
                 Player pendingPlayer = Bukkit.getServer().getPlayer(args[0]);
                 if (pendingPlayer != null && pendingPlayerUuid.contains(pendingPlayer.getUniqueId())){
@@ -32,8 +41,10 @@ public class PlayerTeleportation implements CommandExecutor {
                     pendingPlayer.sendMessage(ChatColor.GREEN + "You have been teleported to " + ChatColor.DARK_GREEN + " " + sender.getName() + ".");
                     removePendingPlayerUuid(pendingPlayer.getUniqueId());
                 }
+            } else {
+                sender.sendMessage("You have no pending requests.");
             }
         }
-        return false;
+        return true;
     }
 }

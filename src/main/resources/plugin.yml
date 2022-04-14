@@ -16,5 +16,10 @@ commands:
     usage: /<command>
     aliases:
       - /tpaccept
+  tpd:
+    description: Decline teleportation from a player
+    usage: /<command>
+    aliases:
+      - /tpdecline
 
 
