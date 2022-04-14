@@ -1,6 +1,6 @@
-name: PlayerTeleporationByRequest
+name: Teleportation
 version: '1.0.2'
-main: com.github.rokkuu.bitofeverything.Bitofeverything
+main: com.github.rokkuu.Teleportation.Teleportation
 api-version: 1.18
 authors: [ rokkuu ]
 website: github.com/rokkuu

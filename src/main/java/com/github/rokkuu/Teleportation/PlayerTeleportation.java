@@ -1,4 +1,4 @@
-package com.github.rokkuu.playerTeleportation;
+package com.github.rokkuu.Teleportation;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.UUID;
 
 
-public class AcceptPlayerTeleport implements CommandExecutor {
+public class PlayerTeleportation implements CommandExecutor {
     private static HashSet<UUID> pendingPlayerUuid = new HashSet<>();
 
     public static void addPendingPlayerUuid(UUID uuid){
