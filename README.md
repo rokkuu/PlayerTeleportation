@@ -8,4 +8,6 @@ Commands:
   
 /tpac <nickname> Aliases: /tpaccept - accept the teleportation.
   
+  /tpd <nickname> Aliases: /tpdecline - decline the teleportation
+  
   
