@@ -15,7 +15,6 @@ commands:
     description: Accept teleportation from a player
     usage: /<command>
     aliases:
-      - /tp accept
       - /tpaccept
 
 
