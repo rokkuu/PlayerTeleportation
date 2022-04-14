@@ -1,18 +1,21 @@
-name: Bitofeverything
+name: PlayerTeleporationByRequest
 version: '1.0.2'
 main: com.github.rokkuu.bitofeverything.Bitofeverything
 api-version: 1.18
 authors: [ rokkuu ]
 website: github.com/rokkuu
 commands:
-  skit:
-    description: Better start of your journey!
-    usage: /<command>
-    aliases: [kit, starterkit, starterKit]
   tpr:
     description: Allows teleportation to players
     usage: /<command>
     aliases:
       - tpa
       - teleportTo
+  tpac:
+    description: Accept teleportation from a player
+    usage: /<command>
+    aliases:
+      - /tp accept
+      - /tpaccept
+
 
