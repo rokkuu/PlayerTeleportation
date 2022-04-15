@@ -15,7 +15,7 @@ public class DeclineTeleportation extends AcceptTeleportation implements Command
             if(!isPendingPlayersEmpty()){
                 Player sourcePlayer = Bukkit.getServer().getPlayerExact(args[0]);
                 if (isPlayerInPendingList(sourcePlayer.getUniqueId())) {
-                    sourcePlayer.sendMessage(ChatColor.GREEN + "Player " + ChatColor.DARK_GREEN + sender.getName() + ChatColor.GREEN + " has declined your request!");
+                    sourcePlayer.sendMessage(ChatColor.RED + "Player " + ChatColor.DARK_RED + sender.getName() + ChatColor.RED + " has declined your request!");
                     removePendingPlayerUuid(sourcePlayer.getUniqueId());
                 }
             } else {

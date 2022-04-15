@@ -1,6 +1,6 @@
 /*
 * @author: github.com/rokkuu
-* @version: 1.0.1
+* @version: 1.1.0
 * */
 
 package com.github.rokkuu.Teleportation;

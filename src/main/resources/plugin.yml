@@ -1,5 +1,5 @@
 name: Teleportation
-version: '1.0.2'
+version: '1.1.0'
 main: com.github.rokkuu.Teleportation.Teleportation
 api-version: 1.18
 authors: [ rokkuu ]
