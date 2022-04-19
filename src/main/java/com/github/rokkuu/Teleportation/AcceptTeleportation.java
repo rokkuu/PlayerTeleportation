@@ -17,7 +17,8 @@ public class AcceptTeleportation implements CommandExecutor {
 
     public static void addPendingPlayerUuid(UUID pendingUuid, Player senderPlayer){
         Player pendingPlayer = Bukkit.getServer().getPlayer(pendingUuid);
-        senderPlayer.sendMessage(ChatColor.GREEN + "Player " + ChatColor.DARK_GREEN + pendingPlayer.getName() + "" + ChatColor.GREEN + " has requested a teleport to you. Type /tpac <nickname> to accept or decline with" +
+        assert pendingPlayer != null;
+        pendingPlayer.sendMessage(ChatColor.GREEN + "Player " + ChatColor.DARK_GREEN + pendingPlayer.getName() + "" + ChatColor.GREEN + " has requested a teleport to you. Type /tpac <nickname> to accept or decline with" +
                 " /tpd <nickname>!");
         pendingPlayerUuid.add(pendingUuid);
     }
